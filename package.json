@@ -1,0 +1,23 @@
+{
+  "name": "electron-starter",
+  "version": "1.0.0",
+  "description": "Basic runnable electron boilerplate project that can be used as a starting point.",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vndrecodes/electron-starter.git"
+  },
+  "author": "vndrecodes",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vndrecodes/electron-starter/issues"
+  },
+  "homepage": "https://github.com/vndrecodes/electron-starter#readme",
+  "devDependencies": {
+    "electron": "^17.2.0"
+  }
+}

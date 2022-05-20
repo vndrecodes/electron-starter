@@ -1,19 +1,26 @@
-const { app, BrowserWindow } = require('electron');
+const { app, BrowserWindow, ipcMain } = require('electron');
+const path = require("path");
+const { registerIpcHandlers } = require("./ipcMainHandler");
 
 
 function createWindow() {
   const win = new BrowserWindow({
-    width: 1600,
-    height: 1200
+    width: 800,
+    height: 800,
+    minWidth:500,
+    webPreferences: {
+      preload: path.join(__dirname, 'preload.js')
+    }
   });
 
-  win.loadFile('index.html');
-  win.webContents.openDevTools();
+  win.loadFile(path.join(__dirname, 'index.html'));
+  // win.webContents.openDevTools();
 }
 
 
 app.whenReady().then(() => {
   createWindow();
+  registerIpcHandlers();
 
   app.on('activate', () => {
     if (BrowserWindow.getAllWindows().length === 0) createWindow();

@@ -5,3 +5,7 @@ window.electronAPI.send('unidirectional:channel', 'Hey there!');
   console.log(result);
   console.log('Find me @ the windows DevTools console!');
 })();
+
+window.electronAPI.receive('unireceive:channel',(event, message) => {
+  console.log(message);
+});

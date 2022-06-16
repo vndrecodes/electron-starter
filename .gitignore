@@ -125,3 +125,8 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+.DS_Store
+.idea/.gitignore
+.idea/electron-starter.iml
+.idea/modules.xml
+.idea/vcs.xml
